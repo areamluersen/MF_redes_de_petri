@@ -11,5 +11,15 @@ public class Pos {
         this.place = place;
     }
 
+    public Integer getId() {
+        return id;
+    }
 
+    public Integer getTokenOutput() {
+        return tokenOutput;
+    }
+
+    public Place getPlace() {
+        return place;
+    }
 }

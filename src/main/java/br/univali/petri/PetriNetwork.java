@@ -26,4 +26,16 @@ public class PetriNetwork {
         // TODO: Implement
         return null;
     }
+
+    public void run() {
+        System.out.println("Starting PetriModel...");
+        for (int i = 0; i < iterationLimit; i++) {
+            System.out.printf("Running iteration %d\n", i);
+            for (Transition t: transitionList) {
+                if (t.isEnabled()) {
+                    t.fire();
+                }
+            }
+        }
+    }
 }
