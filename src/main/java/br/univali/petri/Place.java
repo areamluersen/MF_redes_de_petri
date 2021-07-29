@@ -1,7 +1,7 @@
 package br.univali.petri;
 
 public class Place {
-    private final Integer id;
+    public final Integer id;
     private Integer tokenCount;
 
     public Place(Integer id, Integer tokenCount) {
