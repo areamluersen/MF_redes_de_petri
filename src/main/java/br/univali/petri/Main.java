@@ -8,22 +8,22 @@ public class Main {
         System.out.println("Hello World!");
         List<Integer> mZero = Arrays.asList(1, 1, 1);
         List<Place> places = Arrays.asList(
-                new Place(0, 3),
+                new Place(0, 1),
                 new Place(1 , 2),
                 new Place(2,  0)
         );
         List<Pre> preList = Arrays.asList(
-                new Pre(0,1, 0, 0),
+                new Pre(0,3, 0, 0),
                 new Pre(1,1, 0, 1)
         );
         List<Pos> posList = Arrays.asList(
-                new Pos(0, 1, 2)
+                new Pos(0, 1, 2, 0)
         );
         List<Transition> transitionList = Arrays.asList(
                 new Transition(0)
         );
 
-        var pn = new PetriNetwork(100, mZero, 42L, preList, posList, transitionList, places);
+        var pn = new PetriNetwork(10, mZero, 42L, preList, posList, transitionList, places);
         pn.run();
     }
 }
