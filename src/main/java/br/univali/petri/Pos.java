@@ -1,25 +1,22 @@
 package br.univali.petri;
 
-public class Pos {
-    private final Integer id;
-    private final Integer tokenOutput;
-    private final Place place;
+import java.util.List;
+import java.util.stream.Collectors;
 
-    public Pos(Integer id, Integer tokenOutput, Place place) {
+public class Pos {
+    public final Integer id;
+    public final Integer tokenOutput;
+    public final Integer placeID;
+    public final Integer transitionID;
+
+    public Pos(Integer id, Integer tokenOutput, Integer placeID, Integer transitionID) {
         this.id = id;
         this.tokenOutput = tokenOutput;
-        this.place = place;
+        this.placeID = placeID;
+        this.transitionID = transitionID;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public Integer getTokenOutput() {
-        return tokenOutput;
-    }
-
-    public Place getPlace() {
-        return place;
+    public static List<Pos> findAllRelatedNodes(List<Pos> posList, Transition t) {
+        return posList.stream().filter(p -> p.transitionID.equals(t.id)).collect(Collectors.toList());
     }
 }

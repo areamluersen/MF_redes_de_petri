@@ -1,31 +1,22 @@
 package br.univali.petri;
 
-public class Pre {
-    private final Integer id;
-    private Integer tokenInput;
-    private final Transition transition;
-    private final Place place;
+import java.util.List;
+import java.util.stream.Collectors;
 
-    public Pre(Integer id, Integer tokenInput, Transition transition, Place place) {
+public class Pre {
+    public final Integer id;
+    public Integer tokenInput;
+    public final Integer transitionID;
+    public final Integer placeID;
+
+    public Pre(Integer id, Integer tokenInput, Integer transitionID, Integer placeID) {
         this.id = id;
         this.tokenInput = tokenInput;
-        this.transition = transition;
-        this.place = place;
+        this.transitionID = transitionID;
+        this.placeID = placeID;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public Integer getTokenInput() {
-        return tokenInput;
-    }
-
-    public Transition getTransition() {
-        return transition;
-    }
-
-    public Place getPlace() {
-        return place;
+    public static List<Pre> findAllRelatedNodes(List<Pre> preList, Transition t) {
+        return preList.stream().filter(p -> p.transitionID.equals(t.id)).collect(Collectors.toList());
     }
 }
