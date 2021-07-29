@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Hello World!");
         List<Integer> mZero = Arrays.asList(1, 1, 1);
         List<Place> places = Arrays.asList(
-                new Place(0, 1),
+                new Place(0, 6),
                 new Place(1 , 2),
                 new Place(2,  0)
         );
