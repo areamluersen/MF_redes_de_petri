@@ -32,9 +32,7 @@ public class PetriNetwork {
         for (int i = 0; i < iterationLimit; i++) {
             System.out.printf("Running iteration %d\n", i);
             for (Transition t: transitionList) {
-                if (t.isEnabled()) {
-                    t.fire();
-                }
+
             }
         }
     }
