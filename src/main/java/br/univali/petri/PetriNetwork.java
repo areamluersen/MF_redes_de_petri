@@ -32,9 +32,6 @@ public class PetriNetwork {
         this.transitionList = transitionList;
         this.places = places;
         insertInitalTokens();
-        for (Pos p: posList) {
-            System.out.println(p.toString());
-        }
     }
 
     public static PetriNetwork fromModelFile(Path path) throws IOException {
