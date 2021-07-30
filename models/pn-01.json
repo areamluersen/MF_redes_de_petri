@@ -1,0 +1,17 @@
+{ "petri-network": {
+  "meta" : {
+    "name": "Example Network 01",
+    "iteration-limit" : 100,
+    "rng-seed" : 42
+  },
+  "places" : [0, 1, 2],
+  "transitions": [0],
+  "m-zero" : [1, 1, 0],
+  "pre" : [
+    [0, 0, 1],
+    [1, 0, 1]
+  ],
+  "pos": [
+    [1, 1, 1]
+  ]
+}}

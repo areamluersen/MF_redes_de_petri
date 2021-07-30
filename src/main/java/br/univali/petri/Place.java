@@ -9,6 +9,10 @@ public class Place {
         this.tokenCount = tokenCount;
     }
 
+    public Place(Integer id) {
+        this.id = id;
+    }
+
     void setTokenCount(Integer count) {
         this.tokenCount = count;
     }

@@ -9,7 +9,7 @@ public class Pre {
     public final Integer transitionID;
     public final Integer placeID;
 
-    public Pre(Integer id, Integer tokenInput, Integer transitionID, Integer placeID) {
+    public Pre(Integer id, Integer placeID, Integer transitionID, Integer tokenInput) {
         this.id = id;
         this.tokenInput = tokenInput;
         this.transitionID = transitionID;
