@@ -77,7 +77,7 @@ public class PetriNetwork {
                 System.out.println("=== Zero enabled transitions left, halting model simulation ===");
                 break;
             }
-            var rand = rng.nextInt() % enabledTransitions.size();
+            var rand = Math.abs(rng.nextInt()) % enabledTransitions.size();
             var chosenTransition = enabledTransitions.get(rand);
             for (Pre pre: Pre.findAllRelatedNodes(preList, chosenTransition)) {
                 places.stream()
