@@ -1,6 +1,6 @@
 { "petri-network": {
   "meta" : {
-    "name": "Example Network 01",
+    "name": "Example Network 04",
     "iteration-limit" : 100,
     "rng-seed" : 42
   },
